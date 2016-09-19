@@ -24,17 +24,6 @@ import com.youthcoding.beginnerchallenge.groceryItems.pizzaIngredients.Pepperoni
 import com.youthcoding.beginnerchallenge.groceryItems.pizzaIngredients.PizzaCrust;
 import com.youthcoding.beginnerchallenge.groceryItems.pizzaIngredients.Tomatoes;
 import com.youthcoding.beginnerchallenge.groceryItems.sharedIngredients.Cheese;
-import com.youthcoding.beginnerchallenge.views.cooking.CookingActivity;
-import com.youthcoding.beginnerchallenge.views.dairy.DairyActivity;
-import com.youthcoding.beginnerchallenge.views.deli.DeliActivity;
-import com.youthcoding.beginnerchallenge.views.entrance1.Entrance1Activity;
-import com.youthcoding.beginnerchallenge.views.entrance2.Entrance2Activity;
-import com.youthcoding.beginnerchallenge.views.frozen.FrozenActivity;
-import com.youthcoding.beginnerchallenge.views.generalProduce.GeneralProduceActivity;
-import com.youthcoding.beginnerchallenge.views.meat.MeatActivity;
-import com.youthcoding.beginnerchallenge.views.misc.MiscActivity;
-import com.youthcoding.beginnerchallenge.views.produce.ProduceActivity;
-import com.youthcoding.beginnerchallenge.views.seafood.SeafoodActivity;
 import com.youthcoding.beginnerchallenge.views.startScreen.MainActivity;
 
 import java.util.ArrayList;
@@ -100,7 +89,7 @@ public class UserSectionInStore {
     /**
      * Setter for activity when the activity is not set
      * in setMapSpinner() below.
-     *
+     * <p/>
      * Only used in StoryOptionsActivity.java since
      * the choice spinner is not created in that intent
      * but only in the fragments.
@@ -120,6 +109,7 @@ public class UserSectionInStore {
     public static int getUserLocation() {
         return userLocation;
     }
+
     public static void setUserLocation(int userLocation) {
         UserSectionInStore.userLocation = userLocation;
     }
@@ -155,10 +145,9 @@ public class UserSectionInStore {
      * Based on the choice of the spinner,
      * the user location is updated with
      * the final int values above.
-     *
+     * <p/>
      * After the user location is set, a new
      * activity is created and started.
-     *
      */
     private static void createSwitchForLocationSpinner() {
 
@@ -210,7 +199,7 @@ public class UserSectionInStore {
                             itemsInCurrentLocation = COOKING_SECTION_ITEMS;
                             break;
                         }
-                        default:{
+                        default: {
                             // bring user to entrance if invalid location
                             Log.e("Invalid Location", "An invalid location was entered.  " +
                                     "Defaulting to entrance 1.");
@@ -246,15 +235,12 @@ public class UserSectionInStore {
      * <p/>
      * User location is set whenever the user location
      * spinner has a different value selected
-     *
      */
     public static void StartActivityForUserLocation() {
         Log.i("User LOCATION", String.valueOf(userLocation));
         switch (userLocation) {
             case ENTRANCE_1_SECTION: {
 
-                Intent entrance1Intent = new Intent(mActivity, Entrance1Activity.class);
-                mActivity.startActivity(entrance1Intent);
 
                 break;
             }
@@ -262,8 +248,6 @@ public class UserSectionInStore {
 
             case ENTRANCE_2_SECTION: {
 
-                Intent entrance2Intent = new Intent(mActivity, Entrance2Activity.class);
-                mActivity.startActivity(entrance2Intent);
 
                 break;
             }
@@ -271,8 +255,6 @@ public class UserSectionInStore {
 
             case PRODUCE_SECTION: {
 
-                Intent produceSectionIntent = new Intent(mActivity, ProduceActivity.class);
-                mActivity.startActivity(produceSectionIntent);
 
                 break;
             }
@@ -280,8 +262,6 @@ public class UserSectionInStore {
 
             case DELI_SECTION: {
 
-                Intent deliSectionIntent = new Intent(mActivity, DeliActivity.class);
-                mActivity.startActivity(deliSectionIntent);
 
                 break;
             }
@@ -289,8 +269,6 @@ public class UserSectionInStore {
 
             case SEAFOOD_SECTION: {
 
-                Intent seafoodSectionIntent = new Intent(mActivity, SeafoodActivity.class);
-                mActivity.startActivity(seafoodSectionIntent);
 
                 break;
             }
@@ -298,8 +276,6 @@ public class UserSectionInStore {
 
             case MEATS_SECTION: {
 
-                Intent meatsSectionIntent = new Intent(mActivity, MeatActivity.class);
-                mActivity.startActivity(meatsSectionIntent);
 
                 break;
             }
@@ -307,8 +283,6 @@ public class UserSectionInStore {
 
             case GENERAL_PRODUCE_SECTION: {
 
-                Intent generalProduceSectionIntent = new Intent(mActivity, GeneralProduceActivity.class);
-                mActivity.startActivity(generalProduceSectionIntent);
 
                 break;
             }
@@ -316,8 +290,6 @@ public class UserSectionInStore {
 
             case MISC_SECTION: {
 
-                Intent miscSectionIntent = new Intent(mActivity, MiscActivity.class);
-                mActivity.startActivity(miscSectionIntent);
 
                 break;
             }
@@ -325,8 +297,6 @@ public class UserSectionInStore {
 
             case DAIRY_SECTION: {
 
-                Intent dairySectionIntent = new Intent(mActivity, DairyActivity.class);
-                mActivity.startActivity(dairySectionIntent);
 
                 break;
             }
@@ -334,8 +304,6 @@ public class UserSectionInStore {
 
             case FROZEN_SECTION: {
 
-                Intent frozenSectionIntent = new Intent(mActivity, FrozenActivity.class);
-                mActivity.startActivity(frozenSectionIntent);
 
                 break;
             }
@@ -343,8 +311,6 @@ public class UserSectionInStore {
 
             case COOKING_SECTION: {
 
-                Intent cookingSectionIntent = new Intent(mActivity, CookingActivity.class);
-                mActivity.startActivity(cookingSectionIntent);
 
                 break;
             }
@@ -369,7 +335,6 @@ public class UserSectionInStore {
     /**
      * Reset variables after new activity start
      * just for good measure
-     *
      */
     private static void resetVariables() {
         mActivity.finish();
