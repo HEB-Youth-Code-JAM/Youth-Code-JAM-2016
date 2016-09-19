@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.youthcoding.beginnerchallenge.views.cooking.CookingActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="Cooking End Game"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <!-- Location fragment goes into here -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_location_fragment"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp">
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/required_items"
+            style="@style/custom_bold_textview"
+            android:layout_below="@+id/user_location_fragment"
+            android:id="@+id/required_items_text_view">
+        </TextView>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/required_items_list_view"
+            android:layout_below="@+id/required_items_text_view"
+            android:layout_marginBottom="50dp">
+
+
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_items"
+            style="@style/custom_bold_textview"
+            android:layout_below="@+id/required_items_list_view"
+            android:id="@+id/recipe_items_text_view">
+        </TextView>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recipe_items_list_view"
+            android:layout_below="@+id/recipe_items_text_view">
+
+        </ListView>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cook_button"
+            android:id="@+id/cooking_stand_cook_button"
+            android:layout_below="@+id/recipe_items_list_view"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</FrameLayout>

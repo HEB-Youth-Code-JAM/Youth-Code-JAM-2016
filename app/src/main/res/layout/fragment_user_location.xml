@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.fragments.UserLocationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Spinner
+        android:id="@+id/user_location_spinner"
+        style="@style/Base.Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/sections_array"
+        android:text="@string/close_map"
+        android:layout_marginBottom="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shelf"
+        android:id="@+id/shelf_text_view"
+        style="@style/custom_bold_textview"
+        android:layout_below="@id/user_location_spinner"
+        android:visibility="gone"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/custom_bold_textview"
+        android:layout_below="@id/shelf_text_view"
+        android:id="@+id/items_in_location_list_view"
+        />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

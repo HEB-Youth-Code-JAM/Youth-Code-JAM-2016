@@ -1,0 +1,20 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+## Logs ##
+*.log*
+
+## Windows ##
+Thumbs.db
+ehthumbs.db
+
+## Intellij ##
+.idea/
+out/
+.idea_modules/

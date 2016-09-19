@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youthcoding.beginnerchallenge">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".views.startScreen.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".views.storyOptionsScreen.StoryOptionsActivity" />
+        <activity
+            android:name=".views.entrance1.Entrance1Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_entrance1"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.entrance2.Entrance2Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_entrance2"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.produce.ProduceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_produce"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.cooking.CookingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_cooking"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.dairy.DairyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_dairy"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.deli.DeliActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_deli"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.seafood.SeafoodActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_seafood"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.meat.MeatActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_meat"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.generalProduce.GeneralProduceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_general_produce"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.misc.MiscActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_misc"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".views.frozen.FrozenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_frozen"
+            android:theme="@style/FullscreenTheme"></activity>
+    </application>
+
+</manifest>

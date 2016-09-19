@@ -1,0 +1,73 @@
+<resources>
+    <!-- Welcome Screen -->
+    <string name="app_name">Youth Coding Jam</string>
+    <string name="welcome_msg">Youth Coding Jam - 2016</string>
+    <string name="start">Start [level] Challenge</string> <!-- Novice user can change title[level] -->
+
+    <!-- User Settings Screen -->
+    <string name="first_name">First Name</string>
+    <string name="nick_name">Nickname</string>
+    <string name="begin_story">Begin Story</string>
+    <string name="favorite_recipe">Favorite Recipe</string>
+    <string name="recipe_description">Recipe Description</string>
+    <string name="starting_location">Starting Location</string>
+    <string-array name="recipes_array">
+        <item>Pizza</item>
+        <item>Peanut Butter and Jelly</item>
+        <item>Mac and Cheese</item>
+        <item>Hamburger</item>
+        <item>Chili Cheese Hot Dog</item>
+    </string-array>
+    <string-array name="start_locations_array">
+        <item>Entrance 1</item>
+        <item>Entrance 2</item>
+    </string-array>
+
+    <!-- Map Fragment Strings -->
+    <string name="close_map">Close Map</string>
+    <string name="map_image">Map Image</string>
+    <string-array name="sections_array">
+        <item>Select Location</item>
+        <item>Produce</item>
+        <item>Deli</item>
+        <item>Seafood Market</item>
+        <item>Meat Section</item>
+        <item>General Produce</item>
+        <item>Miscellaneous</item>
+        <item>Dairy</item>
+        <item>Cooking Stand</item>
+    </string-array>
+
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_entrance1">Entrance1Activity</string>
+    <string name="title_activity_entrance2">Entrance2Activity</string>
+    <string name="title_activity_produce">ProduceActivity</string>
+    <string name="title_activity_cooking">CookingActivity</string>
+    <string name="title_activity_dairy">DairyActivity</string>
+    <string name="title_activity_deli">DeliActivity</string>
+    <string name="title_activity_seafood">SeafoodActivity</string>
+    <string name="title_activity_meat">MeatActivity</string>
+    <string name="title_activity_general_produce">GeneralProduceActivity</string>
+    <string name="title_activity_misc">MiscActivity</string>
+    <string name="title_activity_frozen">FrozenActivity</string>
+
+
+
+    <!-- Values for cooking end game screen -->
+    <string name="required_items">Missing Items</string>
+
+
+    <!-- Values for cooking recipe list screen -->
+    <string name="recipe_items">Recipe List</string>
+    <string name="cook_button">Cook recipe</string>
+    <string name="shelf">Location Shelves</string>
+
+
+</resources>
