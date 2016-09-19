@@ -4,7 +4,7 @@ import com.youthcoding.beginnerchallenge.recipes.RecipeSuper;
 
 /**
  * Created by r730819 on 8/15/2016.
- *
+ * <p/>
  * All the users settings in one place.
  */
 public class UserSettings {
@@ -15,6 +15,7 @@ public class UserSettings {
     public static String getFirstName() {
         return firstName;
     }
+
     public static void setFirstName(String userName) {
         UserSettings.firstName = userName;
     }
@@ -22,6 +23,7 @@ public class UserSettings {
     public static String getNickName() {
         return nickName;
     }
+
     public static void setNickName(String nickName) {
         UserSettings.nickName = nickName;
     }
@@ -29,10 +31,10 @@ public class UserSettings {
     public static RecipeSuper getFavoriteRecipe() {
         return favoriteRecipe;
     }
+
     public static void setFavoriteRecipe(RecipeSuper favoriteRecipe) {
         UserSettings.favoriteRecipe = favoriteRecipe;
     }
-
 
 
     /**
@@ -42,12 +44,12 @@ public class UserSettings {
      * @param userLocation String -> int
      */
     public static void setUserLocation(String userLocation) {
-        switch (userLocation){
-            case "Entrance 1":{
+        switch (userLocation) {
+            case "Entrance 1": {
                 UserSectionInStore.setUserLocation(UserSectionInStore.ENTRANCE_1_SECTION);
                 break;
             }
-            case "Entrance 2":{
+            case "Entrance 2": {
                 UserSectionInStore.setUserLocation(UserSectionInStore.ENTRANCE_2_SECTION);
                 break;
             }
@@ -55,7 +57,6 @@ public class UserSettings {
 
 
     }
-
 
 
 }

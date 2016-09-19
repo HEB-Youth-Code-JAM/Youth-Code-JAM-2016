@@ -1,9 +1,9 @@
 package com.youthcoding.beginnerchallenge.recipes;
 
 import com.youthcoding.beginnerchallenge.groceryItems.pizzaIngredients.Pepperoni;
-import com.youthcoding.beginnerchallenge.groceryItems.sharedIngredients.Cheese;
 import com.youthcoding.beginnerchallenge.groceryItems.pizzaIngredients.PizzaCrust;
 import com.youthcoding.beginnerchallenge.groceryItems.pizzaIngredients.Tomatoes;
+import com.youthcoding.beginnerchallenge.groceryItems.sharedIngredients.Cheese;
 
 /**
  * Pizza recipe with 4 ingredients.

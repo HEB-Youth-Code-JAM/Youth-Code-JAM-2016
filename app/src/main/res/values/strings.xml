@@ -13,10 +13,7 @@
     <string name="starting_location">Starting Location</string>
     <string-array name="recipes_array">
         <item>Pizza</item>
-        <item>Peanut Butter and Jelly</item>
-        <item>Mac and Cheese</item>
-        <item>Hamburger</item>
-        <item>Chili Cheese Hot Dog</item>
+
     </string-array>
     <string-array name="start_locations_array">
         <item>Entrance 1</item>

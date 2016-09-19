@@ -1,8 +1,8 @@
 package com.youthcoding.beginnerchallenge.views.startScreen;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
      * Once the user clicks the start challenge
      * button the next screen will come into view
      */
-    void startChallenge(){
+    void startChallenge() {
         Intent storyOptionsIntent = new Intent(this, StoryOptionsActivity.class);
 
         startActivity(storyOptionsIntent);

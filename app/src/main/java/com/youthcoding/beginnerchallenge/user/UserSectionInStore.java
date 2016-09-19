@@ -1,44 +1,14 @@
 package com.youthcoding.beginnerchallenge.user;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
 import com.youthcoding.beginnerchallenge.groceryItems.GroceryItemSuper;
-import com.youthcoding.beginnerchallenge.groceryItems.chiliCheeseHotDog.Chili;
-import com.youthcoding.beginnerchallenge.groceryItems.chiliCheeseHotDog.HotDog;
-import com.youthcoding.beginnerchallenge.groceryItems.chiliCheeseHotDog.HotDogBun;
-import com.youthcoding.beginnerchallenge.groceryItems.hamburger.Bacon;
-import com.youthcoding.beginnerchallenge.groceryItems.hamburger.HamburgerBun;
-import com.youthcoding.beginnerchallenge.groceryItems.hamburger.HamburgerPatty;
-import com.youthcoding.beginnerchallenge.groceryItems.macAndCheese.Butter;
-import com.youthcoding.beginnerchallenge.groceryItems.macAndCheese.Milk;
-import com.youthcoding.beginnerchallenge.groceryItems.macAndCheese.Noodles;
-import com.youthcoding.beginnerchallenge.groceryItems.pbjSandwich.Bread;
-import com.youthcoding.beginnerchallenge.groceryItems.pbjSandwich.Jelly;
-import com.youthcoding.beginnerchallenge.groceryItems.pbjSandwich.PeanutButter;
-import com.youthcoding.beginnerchallenge.groceryItems.pizzaIngredients.Pepperoni;
-import com.youthcoding.beginnerchallenge.groceryItems.pizzaIngredients.PizzaCrust;
-import com.youthcoding.beginnerchallenge.groceryItems.pizzaIngredients.Tomatoes;
-import com.youthcoding.beginnerchallenge.groceryItems.sharedIngredients.Cheese;
-import com.youthcoding.beginnerchallenge.views.cooking.CookingActivity;
-import com.youthcoding.beginnerchallenge.views.dairy.DairyActivity;
-import com.youthcoding.beginnerchallenge.views.deli.DeliActivity;
-import com.youthcoding.beginnerchallenge.views.entrance1.Entrance1Activity;
-import com.youthcoding.beginnerchallenge.views.entrance2.Entrance2Activity;
-import com.youthcoding.beginnerchallenge.views.frozen.FrozenActivity;
-import com.youthcoding.beginnerchallenge.views.generalProduce.GeneralProduceActivity;
-import com.youthcoding.beginnerchallenge.views.meat.MeatActivity;
-import com.youthcoding.beginnerchallenge.views.misc.MiscActivity;
-import com.youthcoding.beginnerchallenge.views.produce.ProduceActivity;
-import com.youthcoding.beginnerchallenge.views.seafood.SeafoodActivity;
-import com.youthcoding.beginnerchallenge.views.startScreen.MainActivity;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 
 /**
@@ -66,20 +36,6 @@ public class UserSectionInStore {
     public static final int COOKING_SECTION = 11;
 
 
-    //Items in user locations
-    public static final ArrayList<GroceryItemSuper> ENTRANCE_1_SECTION_ITEMS = new ArrayList<>();
-    public static final ArrayList<GroceryItemSuper> ENTRANCE_2_SECTION_ITEMS = new ArrayList<>();
-    public static final ArrayList<GroceryItemSuper> PRODUCE_SECTION_ITEMS = new ArrayList<>(Arrays.asList((GroceryItemSuper) new Tomatoes()));
-    public static final ArrayList<GroceryItemSuper> DELI_SECTION_ITEMS = new ArrayList<>(Arrays.asList(new Pepperoni(), new Cheese()));
-    public static final ArrayList<GroceryItemSuper> SEAFOOD_SECTION_ITEMS = new ArrayList<>();
-    public static final ArrayList<GroceryItemSuper> MEATS_SECTION_ITEMS = new ArrayList<>(Arrays.asList(new Bacon(), new HotDog(), new HamburgerPatty()));
-    public static final ArrayList<GroceryItemSuper> FROZEN_SECTION_ITEMS = new ArrayList<>();
-    public static final ArrayList<GroceryItemSuper> GENERAL_PRODUCE_SECTION_ITEMS = new ArrayList<>(Arrays.asList(new HotDogBun(), new HamburgerBun(), new Noodles(), new Bread(), new PizzaCrust()));
-    public static final ArrayList<GroceryItemSuper> MISC_SECTION_ITEMS = new ArrayList<>(Arrays.asList(new Jelly(), new PeanutButter(), new Chili()));
-    public static final ArrayList<GroceryItemSuper> DAIRY_SECTION_ITEMS = new ArrayList<>(Arrays.asList(new Cheese(), new Butter(), new Milk()));
-    public static final ArrayList<GroceryItemSuper> COOKING_SECTION_ITEMS = new ArrayList<>();
-
-
     // User variables
     private static int userLocation;
     private static Activity mActivity;
@@ -100,7 +56,7 @@ public class UserSectionInStore {
     /**
      * Setter for activity when the activity is not set
      * in setMapSpinner() below.
-     *
+     * <p/>
      * Only used in StoryOptionsActivity.java since
      * the choice spinner is not created in that intent
      * but only in the fragments.
@@ -120,6 +76,7 @@ public class UserSectionInStore {
     public static int getUserLocation() {
         return userLocation;
     }
+
     public static void setUserLocation(int userLocation) {
         UserSectionInStore.userLocation = userLocation;
     }
@@ -155,10 +112,9 @@ public class UserSectionInStore {
      * Based on the choice of the spinner,
      * the user location is updated with
      * the final int values above.
-     *
+     * <p/>
      * After the user location is set, a new
      * activity is created and started.
-     *
      */
     private static void createSwitchForLocationSpinner() {
 
@@ -170,54 +126,7 @@ public class UserSectionInStore {
                 if (!spinnerFirstLoadFlag) {
 
                     switch (adapterView.getSelectedItem().toString()) {
-                        case "Produce": {
-                            userLocation = PRODUCE_SECTION;
-                            itemsInCurrentLocation = PRODUCE_SECTION_ITEMS;
-                            break;
-                        }
-                        case "Deli": {
-                            userLocation = DELI_SECTION;
-                            itemsInCurrentLocation = DELI_SECTION_ITEMS;
-                            break;
-                        }
-                        case "Seafood Market": {
-                            userLocation = SEAFOOD_SECTION;
-                            itemsInCurrentLocation = SEAFOOD_SECTION_ITEMS;
-                            break;
-                        }
-                        case "Meat Section": {
-                            userLocation = MEATS_SECTION;
-                            itemsInCurrentLocation = MEATS_SECTION_ITEMS;
-                            break;
-                        }
-                        case "General Produce": {
-                            userLocation = GENERAL_PRODUCE_SECTION;
-                            itemsInCurrentLocation = GENERAL_PRODUCE_SECTION_ITEMS;
-                            break;
-                        }
-                        case "Miscellaneous": {
-                            userLocation = MISC_SECTION;
-                            itemsInCurrentLocation = MISC_SECTION_ITEMS;
-                            break;
-                        }
-                        case "Dairy": {
-                            userLocation = DAIRY_SECTION;
-                            itemsInCurrentLocation = DAIRY_SECTION_ITEMS;
-                            break;
-                        }
-                        case "Cooking Stand": {
-                            userLocation = COOKING_SECTION;
-                            itemsInCurrentLocation = COOKING_SECTION_ITEMS;
-                            break;
-                        }
-                        default:{
-                            // bring user to entrance if invalid location
-                            Log.e("Invalid Location", "An invalid location was entered.  " +
-                                    "Defaulting to entrance 1.");
-                            userLocation = ENTRANCE_1_SECTION;
-                            itemsInCurrentLocation = ENTRANCE_1_SECTION_ITEMS;
-                            break;
-                        }
+                        //switch on position in store
                     }
 
                     Log.i("Adapter Selection", adapterView.getSelectedItem().toString());
@@ -246,119 +155,11 @@ public class UserSectionInStore {
      * <p/>
      * User location is set whenever the user location
      * spinner has a different value selected
-     *
      */
     public static void StartActivityForUserLocation() {
         Log.i("User LOCATION", String.valueOf(userLocation));
         switch (userLocation) {
-            case ENTRANCE_1_SECTION: {
-
-                Intent entrance1Intent = new Intent(mActivity, Entrance1Activity.class);
-                mActivity.startActivity(entrance1Intent);
-
-                break;
-            }
-
-
-            case ENTRANCE_2_SECTION: {
-
-                Intent entrance2Intent = new Intent(mActivity, Entrance2Activity.class);
-                mActivity.startActivity(entrance2Intent);
-
-                break;
-            }
-
-
-            case PRODUCE_SECTION: {
-
-                Intent produceSectionIntent = new Intent(mActivity, ProduceActivity.class);
-                mActivity.startActivity(produceSectionIntent);
-
-                break;
-            }
-
-
-            case DELI_SECTION: {
-
-                Intent deliSectionIntent = new Intent(mActivity, DeliActivity.class);
-                mActivity.startActivity(deliSectionIntent);
-
-                break;
-            }
-
-
-            case SEAFOOD_SECTION: {
-
-                Intent seafoodSectionIntent = new Intent(mActivity, SeafoodActivity.class);
-                mActivity.startActivity(seafoodSectionIntent);
-
-                break;
-            }
-
-
-            case MEATS_SECTION: {
-
-                Intent meatsSectionIntent = new Intent(mActivity, MeatActivity.class);
-                mActivity.startActivity(meatsSectionIntent);
-
-                break;
-            }
-
-
-            case GENERAL_PRODUCE_SECTION: {
-
-                Intent generalProduceSectionIntent = new Intent(mActivity, GeneralProduceActivity.class);
-                mActivity.startActivity(generalProduceSectionIntent);
-
-                break;
-            }
-
-
-            case MISC_SECTION: {
-
-                Intent miscSectionIntent = new Intent(mActivity, MiscActivity.class);
-                mActivity.startActivity(miscSectionIntent);
-
-                break;
-            }
-
-
-            case DAIRY_SECTION: {
-
-                Intent dairySectionIntent = new Intent(mActivity, DairyActivity.class);
-                mActivity.startActivity(dairySectionIntent);
-
-                break;
-            }
-
-
-            case FROZEN_SECTION: {
-
-                Intent frozenSectionIntent = new Intent(mActivity, FrozenActivity.class);
-                mActivity.startActivity(frozenSectionIntent);
-
-                break;
-            }
-
-
-            case COOKING_SECTION: {
-
-                Intent cookingSectionIntent = new Intent(mActivity, CookingActivity.class);
-                mActivity.startActivity(cookingSectionIntent);
-
-                break;
-            }
-
-
-            default: {
-                /* Todo produce error instead.  This should never happen though.*/
-
-                Intent mainMenuIntent = new Intent(mActivity, MainActivity.class);
-                mActivity.startActivity(mainMenuIntent);
-
-                break;
-            }
-
+            //switch and create intents
         }//end switch
 
         resetVariables();
@@ -369,7 +170,6 @@ public class UserSectionInStore {
     /**
      * Reset variables after new activity start
      * just for good measure
-     *
      */
     private static void resetVariables() {
         mActivity.finish();
